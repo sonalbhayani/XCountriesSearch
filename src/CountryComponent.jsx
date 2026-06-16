@@ -18,7 +18,7 @@ export default function CountryComponent() {
            
         }else{
              
-               setDisplayData(data.filter((ele)=>  ele.common.toLowerCase().startsWith(input.toLowerCase())));
+               setDisplayData(data.filter((ele)=>  ele.common.toLowerCase().includes(input.toLowerCase())));
              
         }
        
