@@ -22,16 +22,16 @@ export default function CountryComponent() {
              
         }
        
-    },[input])
+    },[input,data])
    
   return (
     <div className='container m-5'>
         <input type="text" name="input" className='form-control' id="input" value={input} onChange={(e)=>setInput(e.target.value)}/>
         <div className='row mt-5'>
             {displayData.map((ele)=>( 
-                <div className='col-1 div-data m-5' key={ele.common} >
+                <div className='col-1 div-data m-5 countryCard' key={ele.common} >
                     <div className="card">
-                    <img src={ele.png} className="card-img-top img" alt="..."/>
+                    <img src={ele.png} className="card-img-top img" alt={ele.common}/>
                     <div className="card-body">
                         <h5 className="card-title">{ele.common}</h5>
                         
